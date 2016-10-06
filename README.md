@@ -1,4 +1,4 @@
-# hslt.py v0.1
+# hst.py v0.1
 This is simple http server stress tool
 
 ## Dependencies
@@ -9,7 +9,7 @@ twisted
 2. Configure METHOD, URI, HEADERS, BODY, REQUEST_INTERVAL, REQUESTS_TO_SEND as per requirements.
 3. Run script as
 ```
-python hslt.py
+python hst.py
 ```
 
 ## TODO
