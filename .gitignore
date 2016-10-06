@@ -1,0 +1,8 @@
+.gitignore
+*pyc
+*.swp
+.idea
+*log
+*pid
+*bin
+
