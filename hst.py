@@ -32,6 +32,7 @@ from twisted.web.iweb import IBodyProducer
 from twisted.web.client import Agent
 
 
+# Sample POST request
 METHOD = "POST"
 URI = "http://127.0.0.1:8080/test"
 HEADERS = {
@@ -46,6 +47,18 @@ BODY = json.dumps({
 })
 REQUESTS_INTERVAL = 0.00001
 REQUESTS_TO_SEND = 100
+
+
+"""
+# Sample GET request
+METHOD = "POST"
+URI = "http://127.0.0.1:8080/test"
+body = None
+
+# For query string
+# body = { 'foo': 'bar', 'baz': 'qux'}
+"""
+
 
 
 class BodyProducer(object):
