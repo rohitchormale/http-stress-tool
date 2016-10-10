@@ -79,11 +79,10 @@ BODY = json.dumps({
 """
 
 
-
-
 # ####### #
 # HELPERS #
 # ####### #
+
 
 other_headers = [
     ("Cache-Control", "no-cache"),
@@ -91,6 +90,7 @@ other_headers = [
     ("Keep-Alive", random.randint(110, 120)),
     ("Connection", "keep-alive"),
 ]
+
 
 json_headers = [
     ("Accept", "application/json"),
@@ -132,6 +132,7 @@ def get_random_referrer(hosts=[]):
     return referrer
 
 def build_block(size=5):
+    # This function is referenced/copied from - https://github.com/grafov/hulk/blob/master/hulk.py#L64
     block = ''
     for i in range(0, size):
         block += chr(random.randint(65, 90))
@@ -141,6 +142,7 @@ def build_block(size=5):
 # ############ #
 # Stress Tool #
 # ########### #
+
 
 class BodyProducer(object):
     implements(IBodyProducer)
@@ -262,7 +264,7 @@ def generateRequests():
         logging.error(error)
 
     global METHOD, URI, HEADERS, BODY
-    host_pattern = "http?s\://([^/]*)/?.*"
+    host_pattern = "https?\://([^/]*)/?.*"
     match = re.search(host_pattern, URI)
     if match:
         host = match.group(1)
