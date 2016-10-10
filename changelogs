@@ -1,0 +1,9 @@
+v0.2
+This version is inspired from hulk - https://github.com/grafov/hulk
+Added random user-agent, random referrer, host & some other headers
+
+
+
+v0.1
+Support GET request
+Support PORT request
